@@ -5,6 +5,7 @@ A business intelligence project to analyze smart store sales data using Python
 ## Structure 
 
 smart-store-binware/
+
 ├── data/raw/       
 ├── scripts/        
 ├── utils/          
