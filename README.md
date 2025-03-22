@@ -22,10 +22,9 @@ smart-store-binware/
 
 ## Workflow
 
-# Running the Data Preparation Script
+### Running the Data Preparation Script
 
 Executed data_prep.py to verify project setup and read raw data:
-
 ```bash
 py scripts\data_prep.py
 ```
