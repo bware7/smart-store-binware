@@ -1,0 +1,12 @@
+CustomerID,Name,Region,JoinDate,LoyaltyPoints,CustomerSegment
+1001,William White,East,2021-11-11,1500,Premium
+1002,Wylie Coyote,East,2023-02-14,200,New
+1003,Dan Brown,West,2023-10-19,50,New
+1004,Chewbacca,West,2022-11-09,800,Regular
+1005,Dr Who,North,2023-08-18,300,Regular
+1006,Tiffany James,South,2021-06-07,1200,Premium
+1007,Susan Johnson,South,2023-06-30,150,New
+1008,Tony Stark,North,2020-05-01,2000,Premium
+1009,Jason Bourne,West,2020-12-01,1000,Regular
+1010,Hermione Granger,East,2022-12-09,600,Regular
+1011,Hermione Grager,East,2022-12-09,550,Regular

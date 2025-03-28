@@ -4,3 +4,38 @@
 2025-03-21 22:54:52.074 | INFO     | __main__:read_raw_data:26 - Reading raw data from C:\Users\binya\NorthWest\44-632_Business_Intelligence\Module 1\smart-store-binware\data\raw\products_data.csv.
 2025-03-21 22:54:52.089 | INFO     | __main__:read_raw_data:26 - Reading raw data from C:\Users\binya\NorthWest\44-632_Business_Intelligence\Module 1\smart-store-binware\data\raw\sales_data.csv.
 2025-03-21 22:54:52.112 | INFO     | __main__:main:45 - Data preparation complete.
+2025-03-27 22:31:12.612 | INFO     | utils.logger:<module>:39 - Logging to file: logs\project_log.log
+2025-03-27 22:31:12.613 | INFO     | __main__:main:57 - Starting prepare_customers_data.py
+2025-03-27 22:31:12.614 | INFO     | __main__:read_raw_data:22 - Reading data from C:\Users\binya\NorthWest\44-632_Business_Intelligence\Module 1\smart-store-binware\data\raw\customers_data.csv
+2025-03-27 22:31:12.641 | INFO     | __main__:read_raw_data:24 - Loaded 11 rows, 6 columns
+2025-03-27 22:31:12.649 | INFO     | __main__:remove_duplicates:35 - Removed 0 duplicates
+2025-03-27 22:35:21.258 | INFO     | utils.logger:<module>:39 - Logging to file: logs\project_log.log
+2025-03-27 22:35:21.258 | INFO     | __main__:main:57 - Starting prepare_customers_data.py
+2025-03-27 22:35:21.258 | INFO     | __main__:read_raw_data:22 - Reading data from C:\Users\binya\NorthWest\44-632_Business_Intelligence\Module 1\smart-store-binware\data\raw\customers_data.csv
+2025-03-27 22:35:21.258 | INFO     | __main__:read_raw_data:24 - Loaded 11 rows, 6 columns
+2025-03-27 22:35:21.276 | INFO     | __main__:remove_duplicates:35 - Removed 0 duplicates
+2025-03-27 22:35:21.281 | INFO     | __main__:handle_missing_values:41 - Handled missing values: 0 remaining
+2025-03-27 22:35:21.281 | INFO     | __main__:remove_outliers:47 - Removed 0 outliers in LoyaltyPoints
+2025-03-27 22:35:21.281 | INFO     | __main__:standardize_formats:53 - Standardized formats
+2025-03-27 22:35:21.295 | INFO     | __main__:save_prepared_data:30 - Saved to C:\Users\binya\NorthWest\44-632_Business_Intelligence\Module 1\smart-store-binware\data\prepared\customers_data_prepared.csv
+2025-03-27 22:35:21.295 | INFO     | __main__:main:67 - Finished prepare_customers_data.py
+2025-03-27 22:35:29.888 | INFO     | utils.logger:<module>:39 - Logging to file: logs\project_log.log
+2025-03-27 22:35:29.888 | INFO     | __main__:main:55 - Starting prepare_products_data.py
+2025-03-27 22:35:29.888 | INFO     | __main__:read_raw_data:22 - Reading data from C:\Users\binya\NorthWest\44-632_Business_Intelligence\Module 1\smart-store-binware\data\raw\products_data.csv
+2025-03-27 22:35:29.898 | INFO     | __main__:read_raw_data:24 - Loaded 8 rows, 6 columns
+2025-03-27 22:35:29.898 | INFO     | __main__:remove_duplicates:35 - Removed 0 duplicates
+2025-03-27 22:35:29.898 | INFO     | __main__:handle_missing_values:40 - Handled missing values: 0 remaining
+2025-03-27 22:35:29.898 | INFO     | __main__:remove_outliers:46 - Removed 0 outliers in StockQuantity
+2025-03-27 22:35:29.904 | INFO     | __main__:standardize_formats:51 - Standardized formats
+2025-03-27 22:35:29.913 | INFO     | __main__:save_prepared_data:30 - Saved to C:\Users\binya\NorthWest\44-632_Business_Intelligence\Module 1\smart-store-binware\data\prepared\products_data_prepared.csv
+2025-03-27 22:35:29.913 | INFO     | __main__:main:65 - Finished prepare_products_data.py
+2025-03-27 22:35:36.691 | INFO     | utils.logger:<module>:39 - Logging to file: logs\project_log.log
+2025-03-27 22:35:36.692 | INFO     | __main__:main:56 - Starting prepare_sales_data.py
+2025-03-27 22:35:36.693 | INFO     | __main__:read_raw_data:22 - Reading data from C:\Users\binya\NorthWest\44-632_Business_Intelligence\Module 1\smart-store-binware\data\raw\sales_data.csv
+2025-03-27 22:35:36.704 | INFO     | __main__:read_raw_data:24 - Loaded 94 rows, 9 columns
+2025-03-27 22:35:36.706 | INFO     | __main__:remove_duplicates:35 - Removed 0 duplicates
+2025-03-27 22:35:36.708 | INFO     | __main__:handle_missing_values:40 - Handled missing values: 0 remaining
+2025-03-27 22:35:36.710 | INFO     | __main__:remove_outliers:46 - Removed 0 outliers in DiscountPercent
+2025-03-27 22:35:36.721 | INFO     | __main__:standardize_formats:52 - Standardized formats
+2025-03-27 22:35:36.728 | INFO     | __main__:save_prepared_data:30 - Saved to C:\Users\binya\NorthWest\44-632_Business_Intelligence\Module 1\smart-store-binware\data\prepared\sales_data_prepared.csv
+2025-03-27 22:35:36.729 | INFO     | __main__:main:66 - Finished prepare_sales_data.py
