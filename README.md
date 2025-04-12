@@ -6,9 +6,14 @@ A business intelligence project to analyze smart store sales data using Python
 
 smart-store-binware/
 
-├── data/raw/       
+├── data/
+│   ├── clean/
+│   ├── dw/
+│   └── raw/  
+├── reports/   
 ├── scripts/        
-├── utils/          
+├── utils/
+├── screenshots/          
 ├── .gitignore      
 ├── README.md       
 └── requirements.txt 
@@ -19,6 +24,10 @@ smart-store-binware/
 1. Clone: `git clone https://github.com/bware7/smart-store-binware.git`
 2. Virtual Env: `python -m venv .venv` & `.venv\Scripts\activate` (Windows)
 3. Install: `pip install -r requirements.txt`
+4. Power BI (for P5):
+   - Install Power BI Desktop: [https://powerbi.microsoft.com/downloads/](https://powerbi.microsoft.com/downloads/)
+   - Install SQLite ODBC Driver: [http://www.ch-werner.de/sqliteodbc/](http://www.ch-werner.de/sqliteodbc/) (use `sqliteodbc_w64.exe` for 64-bit)
+   - Configure ODBC DSN (`SmartSalesDSN`) to point to `data/dw/smart_sales.db` (or `.venv/data/dw/smart_sales.db`)
 
 ## Workflow
 
@@ -64,6 +73,38 @@ Designed and implemented a star schema data warehouse in SQLite to centralize cl
 - Created `scripts/etl_to_dw.py` to define the schema, load data from `data/clean/` (`clean_customers_data.csv`, `clean_products_data.csv`, `clean_sales_data.csv`), and populate `data/dw/smart_sales.db`.
 - Ran script: `python scripts/etl_to_dw.py`.
 - Validated tables in SQLite Viewer.
+
+### P5: Cross-Platform Reporting with Power BI
+
+#### Overview
+Used Power BI to connect to `smart_sales.db`, query sales data, and create an interactive dashboard with visuals to analyze sales trends.
+
+#### Implementation
+- Connected Power BI to `smart_sales.db` via `SmartSalesDSN`.
+- Queried total sales per customer.
+- Created visuals: column chart (drilldown by date), matrix (category vs. region), bar chart (top customers), line chart (sales trends).
+- Added slicers for date and category filtering.
+
+#### SQL Query
+```sql
+SELECT c.name, SUM(s.sale_amount) AS total_spent
+FROM sale s
+JOIN customer c ON s.customer_id = c.customer_id
+GROUP BY c.name
+ORDER BY total_spent DESC;
+```
+
+#### Visuals
+Column Chart: Sales by year → quarter → month.
+Matrix: Sales by category (e.g., electronics) and region (e.g., East).
+Bar Chart: Top customers (e.g., WILLIAM WHITE).
+Line Chart: Monthly sales trends.
+Slicers: Date range (e.g., Jan-Jul 2024), product category.
+
+#### Notes
+Ran python scripts/etl_to_dw.py to populate database.
+Saved report as smart_sales_report.pbix.
+Screenshots in screenshots/.
 
 Git Commands:
 ```bash
