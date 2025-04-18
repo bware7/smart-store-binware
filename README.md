@@ -4,6 +4,7 @@ A business intelligence project to analyze smart store sales data using Python
 
 ## Structure 
 
+<pre>
 smart-store-binware/
 ├── data/
 │   ├── clean/
@@ -14,12 +15,13 @@ smart-store-binware/
 ├── scripts/
 │   ├── data_prep.py
 │   ├── etl_to_dw.py
-│   └── olap_segment_analysis.py  
+│   └── olap_segment_analysis.py
 ├── utils/
-├── screenshots/        
+├── screenshots/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+</pre>
 
 
 ## Setup
