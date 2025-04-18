@@ -79,18 +79,18 @@ Designed and implemented a star schema data warehouse in SQLite to centralize cl
 - Ran script: `python scripts/etl_to_dw.py`.
 - Validated tables in SQLite Viewer.
 
-### P5: Cross-Platform Reporting with Power BI
+## P5: Cross-Platform Reporting with Power BI
 
-#### Overview
+### Overview
 Used Power BI to connect to `smart_sales.db`, query sales data, and create an interactive dashboard with visuals to analyze sales trends.
 
-#### Implementation
+### Implementation
 - Connected Power BI to `smart_sales.db` via `SmartSalesDSN`.
 - Queried total sales per customer.
 - Created visuals: column chart (drilldown by date), matrix (category vs. region), bar chart (top customers), line chart (sales trends).
 - Added slicers for date and category filtering.
 
-#### SQL Query
+### SQL Query
 ```sql
 SELECT c.name, SUM(s.sale_amount) AS total_spent
 FROM sale s
@@ -99,46 +99,46 @@ GROUP BY c.name
 ORDER BY total_spent DESC;
 ```
 
-#### Visuals
+### Visuals
 Column Chart: Sales by year → quarter → month.
 Matrix: Sales by category (e.g., electronics) and region (e.g., East).
 Bar Chart: Top customers (e.g., WILLIAM WHITE).
 Line Chart: Monthly sales trends.
 Slicers: Date range (e.g., Jan-Jul 2024), product category.
 
-#### Notes
+### Notes
 Ran python scripts/etl_to_dw.py to populate database.
 Saved report as smart_sales_report.pbix.
 Screenshots in screenshots/.
 
-### P6: BI Insights and Storytelling
+## P6: BI Insights and Storytelling
 
-#### Business Goal
+### Business Goal
 Analyzed which customer segments (PREMIUM, REGULAR, NEW) show the highest spending on product subcategories across different regions using OLAP techniques.
 
-#### Data Source
+### Data Source
 Used cleaned CSV files containing sales transactions, customer data, and product information from the `data/clean/` directory.
 
-#### Tools
+### Tools
 Python with pandas for data manipulation, matplotlib/seaborn for visualization, implementing multidimensional OLAP analysis.
 
-#### Workflow & Logic
+### Workflow & Logic
 Implemented three key OLAP operations:
 - **Slicing**: Filtered data by customer segment and region
 - **Dicing**: Broke down data by customer segment and product subcategory
 - **Drill-down**: Explored from segment-subcategory to segment-subcategory-region detail
 
-#### Key Results
+### Key Results
 - **NEW customers**: Strongest in SOUTH ($12,422) with computers (74.7%) and outerwear (12.0%)
 - **PREMIUM customers**: Highest sales in EAST ($23,752) with heavy focus on computers (85.7%)
 - **REGULAR customers**: Best performance in EAST ($31,573) and WEST ($13,619)
 
-#### Business Actions
+### Business Actions
 1. **NEW Customers**: Target South region with computer-outerwear bundles
 2. **PREMIUM Customers**: Create East region VIP program, focus on computer accessories
 3. **REGULAR Customers**: Optimize inventory in East/West regions, improve North engagement
 
-#### Implementation
+### Implementation
 Python script `scripts/olap_segment_analysis.py` performs the analysis, saving results as CSVs and visualizations to `data/results/`.
 
 
