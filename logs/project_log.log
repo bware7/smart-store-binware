@@ -122,3 +122,12 @@ StandardDateTime    0
 dtype: int64, 'duplicate_count': np.int64(0)}
 2025-03-29 13:44:52.444 | INFO     | __main__:save_clean_data:42 - Saved cleaned data to C:\Users\binya\NorthWest\44-632_Business_Intelligence\smart-store-binware\data\clean\clean_sales_data.csv.
 2025-03-29 13:44:52.445 | INFO     | __main__:main:128 - Data preparation complete.
+2025-04-18 12:55:24.947 | INFO     | utils.logger:<module>:39 - Logging to file: logs\project_log.log
+2025-04-18 12:55:24.949 | INFO     | __main__:main:110 - Starting OLAP analysis: Category, Region, Month...
+2025-04-18 12:55:24.960 | ERROR    | __main__:load_data_from_dw:46 - Error loading data: Execution failed on sql '
+        SELECT s.TransactionID, s.SaleDate, s.SaleAmount, s.CustomerID, s.ProductID,
+               c.Region, p.Category
+        FROM sale s
+        JOIN customer c ON s.CustomerID = c.CustomerID
+        JOIN product p ON s.ProductID = p.ProductID
+        ': no such column: s.TransactionID
